@@ -1,0 +1,76 @@
+
+form {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.input-box {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.radio-group {
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.radio-group label {
+    margin-right: 10px;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4466f2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+    background: #3552ce;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    background: #b5c0ff;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+.result-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-top: 5px solid #6e8efb;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.result-box p {
+    margin: 8px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}

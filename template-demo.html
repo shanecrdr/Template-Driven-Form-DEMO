@@ -1,0 +1,40 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <input class="input-box" type="text" name="username" [(ngModel)]="username" placeholder="Enter username" required>
+
+  <input class="input-box" type="email" name="email" [(ngModel)]="email" placeholder="Enter email" required email>
+
+  <input class="input-box" type="password" name="password" [(ngModel)]="password" placeholder="Enter password" required minlength="6">
+
+  <select class="input-box" name="role" [(ngModel)]="role" required>
+    <option value="" disabled selected>Select role</option>
+    <option value="Admin">Admin</option>
+    <option value="User">User</option>
+    <option value="Guest">Guest</option>
+  </select>
+
+  <div class="radio-group">
+    <label>Gender: </label>
+    <input type="radio" name="gender" value="Male" [(ngModel)]="gender" required> Male
+    <input type="radio" name="gender" value="Female" [(ngModel)]="gender" required> Female
+  </div>
+
+  <select class="input-box" name="status" [(ngModel)]="status" required>
+    <option value="" disabled selected>Select Status</option>
+    <option value="Permanent">Permanent</option>
+    <option value="Probationary">Probationary</option>
+  </select>
+
+  <textarea class="input-box" name="comments" [(ngModel)]="comments" placeholder="Notes"></textarea>
+
+  <input class="btn" type="submit" value="Submit" [disabled]="!myForm.valid">
+
+</form>
+
+<div *ngIf="submitted" style="margin-top: 20px; padding: 10px; border: 1px solid blue;">
+  <h4>Submitted Data:</h4>
+  <p>User: {{username}}</p>
+  <p>Email: {{email}}</p>
+  <p>Gender: {{gender}}</p>
+  <p>Status: {{status}}</p>
+</div>
